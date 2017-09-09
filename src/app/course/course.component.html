@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div id="panel" class="panel panel-default text-center">
+			<div class="panel-body" id="panel-body">
+				<div class="row">
+					<div class="form-group">
+                        <div class="col-xs-12">
+                         	<div class="input-group">
+                         		<p>You are adding <b>{{newcourse}}</b></p>
+                                <input type="text" class="input-sm form-control" [(ngModel)] = "newcourse">
+			                    <div class="input-group-btn">
+			                      <button type="button" class="btn btn-sm btn-default" (click)="addcourse()"><i class="glyphicon glyphicon-plus"></i>Add</button>
+			                    </div>
+                  			</div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<h3 class="text-left">Courses</h3>
+			<ul class="list-group">
+				<li *ngFor="let course of courses; let i = index;" class="list-group-item text-left;"><p>{{course}} <span (click)="removecourse(i)"><i class="glyphicon glyphicon-remove"></i> Remove</span></p></li>
+			</ul>
+			
+			<p>Below example is for showing how two way binding works</p>
+			<input [value]="username" (input)="username = $event.target.value">
+			<p>Hello <b>{{username}}</b>!</p>
+
+		</div>
+	</div>
+</div>

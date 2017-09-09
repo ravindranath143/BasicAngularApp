@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div id="panel" class="panel panel-default text-center">
+			<div class="panel-body" id="panel-body">
+				<div class="row">
+					<table class="table">
+						<tr>
+							<th class="text-center">Id</th>
+							<th class="text-center">Title</th>
+							<th class="text-center">Body</th>
+							<th class="text-center">Delete</th>
+						</tr>
+						<tr *ngFor = "let post of posts; let i = index;">
+							<td>{{i+1}}</td>
+							<td>{{post.title}}</td>
+							<td>{{post.body}}</td>
+							<td><span (click)="addpost(i)"><i class="glyphicon glyphicon-edit text-info"></i> </span> / 
+								<span (click)="removepost(i)"><i class="glyphicon glyphicon-remove text-danger"></i> </span>
+							</td>
+							
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>				

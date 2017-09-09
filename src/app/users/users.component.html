@@ -1,0 +1,28 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div id="panel" class="panel panel-default text-center">
+			<div class="panel-body" id="panel-body">
+				<div class="row">
+					<table class="table">
+						<tr>
+							<th class="text-center">Name</th>
+							<th class="text-center">Email</th>
+							<th class="text-center">Phone</th>
+							<th class="text-center">Age</th>
+							<th class="text-center">Gender</th>
+							<th class="text-center">Edit/Delete</th>
+						</tr>
+						<tr *ngFor = "let user of users | keys">
+							<td>{{users[user]['Name']}}</td>
+							<td>{{users[user]['Email']}}</td>
+							<td>{{users[user]['Phone']}}</td>
+							<td>{{users[user]['Age']}}</td>
+							<td>{{users[user]['Gender']}}</td>
+							<td><a href=""><i class="glyphicon glyphicon-edit"></i> </a><a href="" (click)="removeUser(user,users[user]['Age'],$event)"><i class="glyphicon glyphicon-remove"></i> </a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>		
